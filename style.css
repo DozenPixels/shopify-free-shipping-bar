@@ -1,0 +1,19 @@
+.checkout-promo-bar {
+    background-color: #0086ce;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+
+.checkout-promo-bar span {
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 115%;
+}
+
+
+/* Prevent multiple promo-bar from showing if you choose to add functionality like displaying promotions based on cart items */
+
+.checkout-promo-bar:nth-of-type(n+2) {
+    display: none;
+}

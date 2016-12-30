@@ -1,0 +1,24 @@
+<!-- Custom Foundation grid styles are included, but are optional. Font Awesome icons are used. -->
+    
+
+{% if cart.total_price < 2500 %}
+
+    {% assign cartTotal = cart.total_price | money_without_currency %}
+
+    {% assign toFreeShip = cartTotal | minus: 25 | times: 100 | abs %}
+
+    <div class="row full-width checkout-promo-bar">
+
+      <i class="fa fa-exclamation-circle fa-lg" aria-hidden="true"></i> You are {% if toFreeShip < 500 %}only{% endif %} $<span>{{ toFreeShip | money_without_currency }}</span> away from Free Standard Shipping.
+
+    </div>
+
+{% else %}
+
+    <div class="row full-width checkout-promo-bar">
+
+      <i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i> Awesome! Your order qualifies for Free Standard Shipping
+
+    </div>
+
+{% endif %}
