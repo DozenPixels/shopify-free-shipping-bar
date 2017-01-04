@@ -36,4 +36,4 @@ The *cart.total_price* variable is in **cents** therefore, if your free shipping
     console.log(a); //returns 2500
 ```
 
-Because of this, we are forced to use a workaround, declaring a brand new variable to convert our value into somethign shopify can more easily use in our case.
+Because of this, we are forced to use a workaround, declaring a brand new variable to convert our value into something shopify can more easily use in our case.
