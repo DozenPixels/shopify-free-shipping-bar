@@ -1,11 +1,12 @@
 <!-- Custom Foundation grid styles are included, but are optional. Font Awesome icons are used. -->
-    
 
-{% if cart.total_price < 2500 %}
+{% assign free_ship = 2500 %}    
+
+{% if cart.total_price < free_ship %}
 
     {% assign cartTotal = cart.total_price | money_without_currency %}
 
-    {% assign toFreeShip = cartTotal | minus: 25 | times: 100 | abs %}
+    {% assign toFreeShip = cartTotal | times: 100 | minus: free_ship | abs %}
 
     <div class="row full-width checkout-promo-bar">
 
