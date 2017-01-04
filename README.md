@@ -18,7 +18,7 @@ Open your *cart.liquid* file and add `{% include 'snippet-free-shipping' %}` whe
 
 ####Step 3
 
-Customize the *snippet-free-shipping.liquid* file by adding your custom free shipping total byt replacing **25** in the line `{% assign free_ship = 25 %} `. 
+Customize the *snippet-free-shipping.liquid* file by adding your custom free shipping total by replacing **25** in the line `{% assign free_ship = 25 %} `. 
 
 >Notice that we do **not** include the **$** sign when we assign a value to the *free_ship* variable. The value must be a number, not a string.
 
