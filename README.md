@@ -27,6 +27,9 @@ Customize the *snippet-free-shipping.liquid* file by adding your custom free shi
 The *cart.total_price* variable is in **cents** therefore, if your free shipping is $25, liquid expects the value to be 2500. For the sake of simplicity, we enter the *free_ship* value as *25* and then assign a new variable that takes our *free_ship* variable, multiplies it by 100 and saves it as *updated_free_ship*. Liquid is fairly limited with math functions and flexibility when working with variables. We can't simply declare a variable and then multiply it by 100 next time we call it as you would expect in JS or other similar languages, like so:
 
 ```JS
+
+    //In JS:
+    
     var a = 25;
     a = a * 100;
     // or simply a *= 100;
